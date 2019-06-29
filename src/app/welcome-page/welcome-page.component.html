@@ -1,0 +1,30 @@
+<p>
+  welcome-page works!
+</p> 
+
+
+<div class="ui-g">
+  <div class="ui-md-3 ui-md-offset-3  ui-sm-6" *ngIf="firstCircuit">
+    <p-card header="{{ firstCircuit.title }}" subheader="Subheader" (click)="btnAClick();" styleClass="ui-card-shadow">
+      <p-header>
+        <img src="Card" src="{{ firstCircuit.image }}">
+      </p-header>
+      <div [innerHTML]="firstCircuit.description"></div>
+      <p-footer>
+        <button pButton type="button" label="Entrez" icon="pi pi-check" class="ui-g-12"></button>
+      </p-footer>
+    </p-card>
+  </div>
+  <div class="ui-md-3 ui-sm-6" *ngIf="secondCircuit">
+
+    <p-card header="{{ secondCircuit.title }}" subheader="Subheader" (click)="btnBClick();" styleClass="ui-card-shadow">
+      <p-header>
+        <img src="Card" src="{{ secondCircuit.image }}">
+      </p-header>
+      <div [innerHTML]="secondCircuit.description"></div>
+      <p-footer>
+        <button pButton type="button" label="Entrer" icon="pi pi-check" class="ui-g-12"></button>
+      </p-footer>
+    </p-card>
+  </div>
+</div>
